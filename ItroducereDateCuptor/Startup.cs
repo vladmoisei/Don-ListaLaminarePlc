@@ -33,7 +33,7 @@ namespace ItroducereDateCuptor
             });
 
             services.AddDbContext<MyAppDbContext>(options =>
-            options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=myDatabase;Trusted_Connection=True;"));
+            options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=FirstDatabase;Trusted_Connection=True;"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

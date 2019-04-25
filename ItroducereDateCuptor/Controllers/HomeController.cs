@@ -19,7 +19,7 @@ namespace ItroducereDateCuptor.Controllers
         }
         public IActionResult Index()
         {
-            List<Blum> listaDeAfisat = _context.Blums.ToList();
+            List<Blum> listaDeAfisat = _context.Blums.Where(b => !b.IsDatAfara).ToList();
             return View(listaDeAfisat);
         }
 
