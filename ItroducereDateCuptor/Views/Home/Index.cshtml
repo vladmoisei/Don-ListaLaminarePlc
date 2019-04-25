@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ItroducereDateCuptor.Blum>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diametru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sarja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Furnizor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calitate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @if (Model != null)
+    {
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diametru)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sarja)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Furnizor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Calitate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+</table>
+
+
+
+
+@section scripts {
+    <script src="~/js/site.js"></script>
+}
