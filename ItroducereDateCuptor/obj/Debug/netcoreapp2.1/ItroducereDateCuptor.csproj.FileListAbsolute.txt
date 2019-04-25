@@ -30,3 +30,35 @@ C:\Users\IA\source\repos\ItroducereDateCuptor\ItroducereDateCuptor\obj\Debug\net
 C:\Users\IA\source\repos\ItroducereDateCuptor\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.dll
 C:\Users\IA\source\repos\ItroducereDateCuptor\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.pdb
 C:\Users\IA\source\repos\ItroducereDateCuptor\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csproj.CopyComplete
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csproj.CoreCompileInputs.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorAssemblyInfo.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorAssemblyInfo.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.AssemblyInfoInputs.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.AssemblyInfo.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.dll
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.pdb
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.deps.json
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.runtimeconfig.json
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.runtimeconfig.dev.json
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.dll
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.pdb
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.Views.dll
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\bin\Debug\netcoreapp2.1\ItroducereDateCuptor.Views.pdb
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.TagHelpers.input.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.TagHelpers.output.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorCoreGenerate.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Home\ImportFile.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorTargetAssemblyInfo.cache
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorTargetAssemblyInfo.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.Views.pdb
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csproj.CopyComplete

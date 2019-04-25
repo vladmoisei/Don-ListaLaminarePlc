@@ -11,10 +11,16 @@ namespace ItroducereDateCuptor.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly MyAppDbContext _context;
 
+        public HomeController(MyAppDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            return View(Blums.ListOfBlums);
+            List<Blum> listaDeAfisat = _context.Blums.ToList();
+            return View(listaDeAfisat);
         }
 
         public IActionResult ImportFile()
@@ -36,17 +42,18 @@ namespace ItroducereDateCuptor.Controllers
                 ViewBag.Mesaj = "Fisierul nu are extensia .xlsx!";
                 return View();
             }
+
             List<Blum> listaBlumuri = await Auxiliar.GetBlumsListFromFileAsync(formFile);
-            if (Blums.ListOfBlums != null)
+
+            if (listaBlumuri != null)
             {
-
-
                 foreach (Blum item in listaBlumuri)
-                {
-                    Blums.ListOfBlums.Add(item);
+                {                 
+                    _context.Add(item);
                 }
+                _context.SaveChanges();
             }
-            else Blums.ListOfBlums = listaBlumuri;            
+
             return RedirectToAction("Index", "Home");
             //return Json(Blums.ListOfBlums);
             //return RedirectToAction("Index", "Home", listaBlumuri);
