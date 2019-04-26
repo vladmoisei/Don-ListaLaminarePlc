@@ -62,4 +62,3 @@ C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCupt
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorTargetAssemblyInfo.cs
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.Views.pdb
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csproj.CopyComplete
-C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csprojAssemblyReference.cache

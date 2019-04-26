@@ -2,7 +2,22 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+<div class="row">
+    <form method="post" enctype="multipart/form-data" asp-controller="home" asp-action="ImportFile">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Apasa butonul de mai jos pentru a da afara urmatoarea bucata:</p>
+                <input type="submit" value="Laminare" formaction="Home/IntroducereInLaminare"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Apasa butonul de mai jos pentru a da retur urmatoarea bucata:</p>
+                <input type="submit" value="Retur" formaction="Home/ReturBlum"/>
+            </div>
+        </div>
+    </form>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -21,6 +36,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Calitate)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDatAfara)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRetur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataOraLaminare)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -29,23 +53,32 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Diametru)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Sarja)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Furnizor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Calitate)
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Diametru)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sarja)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Furnizor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calitate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDatAfara)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsRetur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataOraLaminare)
+                </td>
+            </tr>
             }
         </tbody>
     }

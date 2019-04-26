@@ -29,7 +29,7 @@ namespace ItroducereDateCuptor
                         int diam = int.TryParse(worksheet.Cells[row, 2].Value.ToString().Trim(), out int d) ? d : 0;
                         list.Add(new Blum
                         {
-                            Id = id,
+                            //Id = id, *Deoarece introduc in SQL server las sa fie adaugat de sql, pentru a fi sigur ca sunt diferite*
                             Diametru = diam,
                             Sarja = worksheet.Cells[row, 3].Value.ToString().Trim(),
                             Furnizor = worksheet.Cells[row, 4].Value.ToString().Trim(),
