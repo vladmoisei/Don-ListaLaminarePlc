@@ -62,3 +62,8 @@ C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCupt
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.RazorTargetAssemblyInfo.cs
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.Views.pdb
 C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\ItroducereDateCuptor.csproj.CopyComplete
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Blums\Create.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Blums\Delete.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Blums\Details.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Blums\Edit.g.cshtml.cs
+C:\Users\vladm\Desktop\Proiecte serviciu\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\Razor\Views\Blums\Index.g.cshtml.cs

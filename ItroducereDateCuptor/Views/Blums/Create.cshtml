@@ -1,0 +1,71 @@
+﻿@model ItroducereDateCuptor.Blum
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Blum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Diametru" class="control-label"></label>
+                <input asp-for="Diametru" class="form-control" />
+                <span asp-validation-for="Diametru" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sarja" class="control-label"></label>
+                <input asp-for="Sarja" class="form-control" />
+                <span asp-validation-for="Sarja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Furnizor" class="control-label"></label>
+                <input asp-for="Furnizor" class="form-control" />
+                <span asp-validation-for="Furnizor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calitate" class="control-label"></label>
+                <input asp-for="Calitate" class="form-control" />
+                <span asp-validation-for="Calitate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsDatAfara" /> @Html.DisplayNameFor(model => model.IsDatAfara)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsRetur" /> @Html.DisplayNameFor(model => model.IsRetur)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsRebut" /> @Html.DisplayNameFor(model => model.IsRebut)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataOraLaminare" class="control-label"></label>
+                <input asp-for="DataOraLaminare" class="form-control" />
+                <span asp-validation-for="DataOraLaminare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

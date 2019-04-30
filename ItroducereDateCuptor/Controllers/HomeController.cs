@@ -17,10 +17,42 @@ namespace ItroducereDateCuptor.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
+            // Returnare counter bare data afara (verific, daca nu exista il initializez cu 0)
+            Auxiliar.CounterBareDateAfara = string.IsNullOrEmpty(Auxiliar.CounterBareDateAfara.ToString()) ? 0 : Auxiliar.CounterBareDateAfara;
+            ViewBag.CounterBareDateAfara = Auxiliar.CounterBareDateAfara;
+
             List<Blum> listaDeAfisat = _context.Blums.Where(b => !b.IsDatAfara && !b.IsRetur).ToList();
+            listaDeAfisat.Insert(0, _context.Blums.Where(b => b.IsDatAfara || b.IsRetur).ToList().LastOrDefault());
             return View(listaDeAfisat);
+        }
+
+        // Actioune resetare counter bare pe schimb
+        public IActionResult ResetCountBar()
+        {
+            Auxiliar.CounterBareDateAfara = 0;
+            return RedirectToAction("Index");
+        }
+
+        // Neutilizata
+        // Functie verificare daca se incadreaza in timpul de productie pe unul din schimburi
+        public bool IsInShiftsTime()
+        {
+            DateTime t1 = DateTime.Now;
+            DateTime timeStartShift1 = Convert.ToDateTime("08:00:00 AM");
+            DateTime timeStopShift1 = Convert.ToDateTime("06:00:00 PM");
+            DateTime timeStartShift2 = Convert.ToDateTime("08:00:00 PM");
+            DateTime timeStopShift2 = Convert.ToDateTime("06:00:00 AM");
+
+            if (DateTime.Compare(t1, timeStartShift1) > 0 && (DateTime.Compare(t1, timeStopShift1) < 0))
+                return true;
+
+            if (DateTime.Compare(t1, timeStartShift2) > 0 && (DateTime.Compare(t1, timeStopShift2) < 0))
+                return true;
+
+            return false;
         }
 
         [HttpPost]
@@ -33,6 +65,7 @@ namespace ItroducereDateCuptor.Controllers
                 blumModificat.DataOraLaminare = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 _context.SaveChanges();
                 //return Content(blumModificat.Id.ToString() + blumModificat.IsDatAfara.ToString());
+                Auxiliar.CounterBareDateAfara++;
             }
             return RedirectToAction("Index");
         }
@@ -46,6 +79,7 @@ namespace ItroducereDateCuptor.Controllers
                 blumModificat.IsRetur = true;
                 blumModificat.DataOraLaminare = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 _context.SaveChanges();
+                Auxiliar.CounterBareDateAfara++;
                 //return Content(blumModificat.Id.ToString() + blumModificat.IsDatAfara.ToString());
             }
             return RedirectToAction("Index");

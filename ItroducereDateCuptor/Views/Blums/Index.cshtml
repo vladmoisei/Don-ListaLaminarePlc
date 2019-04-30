@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ItroducereDateCuptor.Blum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<p>
+    <a asp-area="" asp-controller="Blums" asp-action="ExportToExcelAsync">Exporta in fisier Excel</a>
+</p>
+<p>
+    <a asp-area="" asp-controller="Blums" asp-action="DeleteAll" style="color:whitesmoke; background-color:orangered; border-radius: 5px">Stergere totala lista blumuri</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Diametru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sarja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Furnizor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calitate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDatAfara)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRetur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRebut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataOraLaminare)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diametru)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sarja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Furnizor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calitate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDatAfara)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRetur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRebut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataOraLaminare)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

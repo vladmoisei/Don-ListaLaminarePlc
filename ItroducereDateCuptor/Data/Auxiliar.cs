@@ -10,6 +10,7 @@ namespace ItroducereDateCuptor
 {
     public static class Auxiliar
     {
+        // Task returnare lista blumuri din fisier excel 
         public static async Task<List<Blum>> GetBlumsListFromFileAsync(IFormFile formFile)
         {
             var list = new List<Blum>();
@@ -40,6 +41,9 @@ namespace ItroducereDateCuptor
             }
             return list;
         }
+
+        // Variabila globala  Counter bare date afara
+        public static int CounterBareDateAfara { get; set; }
 
         // Scriere In PLC 
         /*
