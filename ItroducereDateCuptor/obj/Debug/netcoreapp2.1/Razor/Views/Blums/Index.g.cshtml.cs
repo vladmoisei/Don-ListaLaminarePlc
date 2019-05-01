@@ -71,7 +71,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n<h2>Index</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(119, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e7162ff92414ee781dbbdbe2e324f02", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c006979540974813b0743d655b23dcf5", async() => {
                 BeginContext(142, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -93,7 +93,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n</p>\r\n<p>\r\n    ");
             EndContext();
             BeginContext(173, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ffa8e927fc74119a02f4f8eb8d320ce", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db89fe18d4554fa9b1040bf5f3be4ca0", async() => {
                 BeginContext(243, 23, true);
                 WriteLiteral("Exporta in fisier Excel");
                 EndContext();
@@ -119,7 +119,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n</p>\r\n<p>\r\n    ");
             EndContext();
             BeginContext(287, 167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58c9e05e9ca941a9bf5b096e72a650a7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f2e13fefeb4412b95b8dd8d541c78d7", async() => {
                 BeginContext(421, 29, true);
                 WriteLiteral("Stergere totala lista blumuri");
                 EndContext();
@@ -314,7 +314,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(2257, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4fce97d3fd92407e82027fe91b47419c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b60b781c8eb42c4ab2170bcc3b73e35", async() => {
                 BeginContext(2302, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -349,7 +349,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(2330, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "766df851c3c24241b33f24891c3ea1ef", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c1a94b7ebc94b76810459cbac1e934e", async() => {
                 BeginContext(2378, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -384,7 +384,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(2409, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45d838abb2ac4d67a848214425831b00", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6d2e307490ef4da7bf6609c2f973672e", async() => {
                 BeginContext(2456, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

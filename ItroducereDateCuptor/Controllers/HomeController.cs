@@ -6,19 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ItroducereDateCuptor.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SignalR;
+using IntroducereDateCuptor;
+using Newtonsoft.Json;
 
 namespace ItroducereDateCuptor.Controllers
 {
     public class HomeController : Controller
     {
         private readonly MyAppDbContext _context;
+        private readonly IHubContext<ListaHub> _hub;
 
-        public HomeController(MyAppDbContext context)
+        public HomeController(MyAppDbContext context, IHubContext<ListaHub> hub)
         {
             _context = context;
+            _hub = hub;
         }
-
-        public IActionResult Index()
+        
+            //IActionResult
+        public async Task<IActionResult> Index()
         {
             // Returnare counter bare data afara (verific, daca nu exista il initializez cu 0)
             Auxiliar.CounterBareDateAfara = string.IsNullOrEmpty(Auxiliar.CounterBareDateAfara.ToString()) ? 0 : Auxiliar.CounterBareDateAfara;
@@ -26,6 +32,10 @@ namespace ItroducereDateCuptor.Controllers
 
             List<Blum> listaDeAfisat = _context.Blums.Where(b => !b.IsDatAfara && !b.IsRetur).ToList();
             listaDeAfisat.Insert(0, _context.Blums.Where(b => b.IsDatAfara || b.IsRetur).ToList().LastOrDefault());
+            //string listaDeAfisatt = "proba";
+            int nrBareDateAfara = ViewBag.CounterBareDateAfara;
+            string listaDeTrimisInJavaScript = JsonConvert.SerializeObject(listaDeAfisat, Formatting.None);
+            await _hub.Clients.All.SendAsync("show_data", listaDeTrimisInJavaScript, nrBareDateAfara);
             return View(listaDeAfisat);
         }
 

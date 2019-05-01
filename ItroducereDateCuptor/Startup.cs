@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IntroducereDateCuptor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,7 @@ namespace ItroducereDateCuptor
             services.AddDbContext<MyAppDbContext>(options =>
             options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=FirstDatabase;Trusted_Connection=True;"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +55,10 @@ namespace ItroducereDateCuptor
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ListaHub>("/ListaHub");
+            });
 
             app.UseMvc(routes =>
             {

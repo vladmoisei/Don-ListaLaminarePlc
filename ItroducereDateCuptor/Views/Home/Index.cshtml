@@ -11,22 +11,22 @@
                 <input type="submit" value="Laminare" formaction="Home/IntroducereInLaminare" />
             </div>
         </div>
-        <div class="form-group col-lg-4"">
+        <div class="form-group col-lg-4" ">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a da retur urmatoarea bucata:</p>
                 <input type="submit" value="Retur" formaction="Home/ReturBlum" />
             </div>
         </div>
-        <div class="form-group col-lg-4"">
+        <div class="form-group col-lg-4" ">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a reseta counterul de bare:</p>
                 <input type="submit" value="Reset counter" formaction="Home/ResetCountBar" />
             </div>
         </div>
     </form>
-    
+
 </div>
-<p>Bare date afara: @ViewBag.CounterBareDateAfara</p>
+<p>Bare date afara: <span id="nrBareDateAfara">@ViewBag.CounterBareDateAfara</span></p>
 <table class="table">
     <thead>
         <tr>
@@ -59,51 +59,53 @@
     </thead>
     @if (Model != null)
     {
-        <tbody>
+        <tbody id="corpTabel">
             @foreach (var item in Model)
             {
-            <tr class="@BackgroundColour(item)">
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Diametru)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sarja)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Furnizor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Calitate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsDatAfara)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsRetur)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataOraLaminare)
-                </td>
-            </tr>
+                <tr class="@BackgroundColour(item)">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diametru)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sarja)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Furnizor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Calitate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsDatAfara)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsRetur)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataOraLaminare)
+                    </td>
+                </tr>
             }
         </tbody>
     }
 </table>
 
 @functions {
-    public string BackgroundColour(Blum blum)
-    {
-        if (blum == null) return "";
-        if (blum.IsDatAfara || blum.IsRetur)
-            return "background_green";
-        return "";
-    }
+public string BackgroundColour(Blum blum)
+{
+    if (blum == null) return "";
+    if (blum.IsDatAfara || blum.IsRetur)
+        return "background_green";
+    return "";
+}
 }
 
 
 @section scripts {
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/site.js"></script>
+    <script src="~/js/signalR.js"></script>
 }
