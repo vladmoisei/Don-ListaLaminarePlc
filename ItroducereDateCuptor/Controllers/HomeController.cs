@@ -84,6 +84,8 @@ namespace ItroducereDateCuptor.Controllers
                 _context.SaveChanges();
                 // Incrementam counter bare data afara
                 Auxiliar.CounterBareDateAfara++;
+                // Scriere date blum in PLC
+                Auxiliar.ScriereInPlc(blumModificat);
             }
             return RedirectToAction("Index");
         }
@@ -99,6 +101,8 @@ namespace ItroducereDateCuptor.Controllers
                 blumModificat.DataOraLaminare = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 _context.SaveChanges();
                 Auxiliar.CounterBareDateAfara++;
+                // Scriere date blum in PLC
+                Auxiliar.ScriereInPlc(blumModificat);
                 //return Content(blumModificat.Id.ToString() + blumModificat.IsDatAfara.ToString());
             }
             return RedirectToAction("Index");

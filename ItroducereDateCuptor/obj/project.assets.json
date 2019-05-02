@@ -3037,6 +3037,15 @@
           }
         }
       },
+      "S7netplus/0.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/S7.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/S7.Net.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8119,6 +8128,22 @@
         "version.txt"
       ]
     },
+    "S7netplus/0.3.0": {
+      "sha512": "geoLQoJkWU34251xD49ffUeHYOS5MDCupCaHQQ1dk92eXdhmzmdJETV1vKbHRuRiiV9xUvdEOZ5NHaH7rX/Cqw==",
+      "type": "package",
+      "path": "s7netplus/0.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net452/S7.Net.dll",
+        "lib/net452/S7.Net.pdb",
+        "lib/netstandard1.3/S7.Net.dll",
+        "lib/netstandard1.3/S7.Net.pdb",
+        "lib/netstandard2.0/S7.Net.dll",
+        "lib/netstandard2.0/S7.Net.pdb",
+        "s7netplus.0.3.0.nupkg.sha512",
+        "s7netplus.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
@@ -12809,7 +12834,8 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
+      "S7netplus >= 0.3.0"
     ]
   },
   "packageFolders": {
@@ -12876,6 +12902,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.1.9, )"
+          },
+          "S7netplus": {
+            "target": "Package",
+            "version": "[0.3.0, )"
           }
         },
         "imports": [
