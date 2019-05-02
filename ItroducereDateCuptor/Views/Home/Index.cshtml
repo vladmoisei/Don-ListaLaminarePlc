@@ -3,30 +3,35 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="row">
+<div id="formularButoane" class="row">
     <form method="post" enctype="multipart/form-data" asp-controller="home" asp-action="ImportFile">
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-3">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a da afara urmatoarea bucata:</p>
                 <input type="submit" value="Laminare" formaction="Home/IntroducereInLaminare" />
             </div>
         </div>
-        <div class="form-group col-lg-4" ">
+        <div class="form-group col-lg-3">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a da retur urmatoarea bucata:</p>
                 <input type="submit" value="Retur" formaction="Home/ReturBlum" />
             </div>
         </div>
-        <div class="form-group col-lg-4" ">
+        <div class="form-group col-lg-3">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a reseta counterul de bare:</p>
                 <input type="submit" value="Reset counter" formaction="Home/ResetCountBar" />
             </div>
         </div>
+        <div class="form-group col-lg-3">
+            <div class="col-md-10">
+                <p>Pentru ascundere comenzi botoane apasa butonul:</p>
+                <button id="butonAscundere">Acundere butoane</button>
+            </div>
+        </div>
     </form>
-
 </div>
-<p>Bare date afara: <span id="nrBareDateAfara">@ViewBag.CounterBareDateAfara</span></p>
+<h3>Bare date afara: <span id="nrBareDateAfara">@ViewBag.CounterBareDateAfara</span></h3>
 <table class="table">
     <thead>
         <tr>
@@ -103,9 +108,9 @@ public string BackgroundColour(Blum blum)
 }
 }
 
-
+@* Scripturi librarie SignalR, plus signalR create de mine, si site.js *@
 @section scripts {
     <script src="~/lib/signalr/dist/browser/signalr.js"></script>
-    <script src="~/js/site.js"></script>
     <script src="~/js/signalR.js"></script>
+    <script src="~/js/site.js"></script>
 }

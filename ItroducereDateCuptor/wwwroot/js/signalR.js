@@ -12,6 +12,8 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/ListaHub").build()
 
 // Receive functie apelata dupa server
 connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara) {
+    // Retrive data (list of blums) from server
+    // Convertesc in JSON
     var data = JSON.parse(listaDeTrimisInJavaScript);
     // Actualizare numar bare date afara
     document.getElementById("nrBareDateAfara").innerHTML = nrBareDateAfara;
@@ -60,24 +62,11 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
         corpTabel.appendChild(tr);
     });
 
-    //tr.textContent = listaDeAfisat.length;
-    //console.log(tr.textContent);
-    //document.getElementById('corpTabel').appendChild(tr);
-
-    //listaDeAfisat.forEach(CreareDataHTML);
-
     function CreareDataHTML(item, index) {
         var tr = document.createElement("tr");
         tr.textContent = item.Id;
         document.getElementById('corpTabel').appendChild(tr);
     }
-    //var lista = JSON.parse(listaDeAfisat);
-    //console.log(listaDeAfisatt);
-    //var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    //var encodedMsg = user + " says " + msg;
-    //var li = document.createElement("li");
-    //li.textContent = encodedMsg;
-    //document.getElementById("messagesList").appendChild(li);
 });
 
 //connection.on("ReceiveMessage", function (user, message) {

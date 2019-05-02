@@ -33,8 +33,9 @@ namespace ItroducereDateCuptor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // Server acasa: SQLEXPRESS
             services.AddDbContext<MyAppDbContext>(options =>
-            options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=FirstDatabase;Trusted_Connection=True;"));
+            options.UseSqlServer(@"Server=.\WINCCPLUSMIG2014;Database=FirstDatabase;Trusted_Connection=True;"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSignalR();
         }

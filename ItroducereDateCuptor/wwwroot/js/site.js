@@ -2,3 +2,8 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+document.getElementById("butonAscundere").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("formularButoane").classList.add("hidden");
+});

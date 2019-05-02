@@ -29,17 +29,21 @@ namespace ItroducereDateCuptor.Controllers
             // Returnare counter bare data afara (verific, daca nu exista il initializez cu 0)
             Auxiliar.CounterBareDateAfara = string.IsNullOrEmpty(Auxiliar.CounterBareDateAfara.ToString()) ? 0 : Auxiliar.CounterBareDateAfara;
             ViewBag.CounterBareDateAfara = Auxiliar.CounterBareDateAfara;
-
+            // Selectie lista blumuri care nu sunt date afara sau retur
             List<Blum> listaDeAfisat = _context.Blums.Where(b => !b.IsDatAfara && !b.IsRetur).ToList();
+            // Adaugare in lista pe prima pozitie ultima bucata data afara sau retur
             listaDeAfisat.Insert(0, _context.Blums.Where(b => b.IsDatAfara || b.IsRetur).ToList().LastOrDefault());
             //string listaDeAfisatt = "proba";
+            // Creare parametru nr bare date afara pentru a il transfera la functie SignalR
             int nrBareDateAfara = ViewBag.CounterBareDateAfara;
+            // Creare parametru JSON din lista afisare pentru a trimite in SignalR
             string listaDeTrimisInJavaScript = JsonConvert.SerializeObject(listaDeAfisat, Formatting.None);
+            // SignalR - trimit la toti clientii lista actualizata si nrBareDateAfara
             await _hub.Clients.All.SendAsync("show_data", listaDeTrimisInJavaScript, nrBareDateAfara);
             return View(listaDeAfisat);
         }
 
-        // Actioune resetare counter bare pe schimb
+        // Actiune resetare counter bare pe schimb
         public IActionResult ResetCountBar()
         {
             Auxiliar.CounterBareDateAfara = 0;
@@ -65,21 +69,26 @@ namespace ItroducereDateCuptor.Controllers
             return false;
         }
 
+        // Actiune introducere Blum in Laminare cand apasa butonul
         [HttpPost]
         public IActionResult IntroducereInLaminare()
         {
+            // Selectam din lista sql primul blum care nu e dat afara sau retur
             Blum blumModificat = _context.Blums.Where(b => !b.IsDatAfara && !b.IsRetur).FirstOrDefault();
             if (blumModificat != null)
             {
+                // Ii atribuim proprietate IsDataAfara = true plus data si ora
                 blumModificat.IsDatAfara = true;
                 blumModificat.DataOraLaminare = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                //Salvam modificari in sql
                 _context.SaveChanges();
-                //return Content(blumModificat.Id.ToString() + blumModificat.IsDatAfara.ToString());
+                // Incrementam counter bare data afara
                 Auxiliar.CounterBareDateAfara++;
             }
             return RedirectToAction("Index");
         }
 
+        // La fel ca la introducere in laminare (doar ca e pt retur)
         [HttpPost]
         public IActionResult ReturBlum()
         {
@@ -97,7 +106,6 @@ namespace ItroducereDateCuptor.Controllers
 
         public IActionResult IntroducereRetur()
         {
-
             return View("Index");
         }
 
@@ -107,9 +115,11 @@ namespace ItroducereDateCuptor.Controllers
             return View();
         }
 
+        // Actiune import data from excel file
         [HttpPost]
         public async Task<IActionResult> ImportFile(List<IFormFile> files)
         {
+            // Verificam daca lista de fisiera incarcata  are 0 elemente si returnam msj
             if (files.Count == 0)
             {
                 ViewBag.Hidden = "";
@@ -117,7 +127,9 @@ namespace ItroducereDateCuptor.Controllers
                 return View();
                }
 
+            // Cream fisier din primul lelement din lista de fisiere
             IFormFile formFile = files[0];
+            // Verificam daca fisierul are extensia .xlsx
             if (!formFile.FileName.EndsWith(".xlsx"))
             {
                 ViewBag.Hidden = "";
@@ -125,9 +137,10 @@ namespace ItroducereDateCuptor.Controllers
                 return View();
             }
 
-
+            //Cream lista de blumuri din fisier excel
             List<Blum> listaBlumuri = await Auxiliar.GetBlumsListFromFileAsync(formFile);
 
+            // Actualizam baza de date cu lista de blumuri din fisier
             if (listaBlumuri != null)
             {
                 foreach (Blum item in listaBlumuri)
@@ -137,10 +150,8 @@ namespace ItroducereDateCuptor.Controllers
                 _context.SaveChanges();
             }
 
+            // Redirection la Index
             return RedirectToAction("Index", "Home");
-            //return Json(Blums.ListOfBlums);
-            //return RedirectToAction("Index", "Home", listaBlumuri);
-            //return View();
         }
 
         public IActionResult About()

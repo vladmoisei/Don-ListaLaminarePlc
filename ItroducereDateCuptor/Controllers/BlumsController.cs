@@ -44,7 +44,7 @@ namespace ItroducereDateCuptor.Controllers
 
             using (var pck = new ExcelPackage(stream))
             {
-                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Elind");
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Laminare");
                 ws.Cells["A1:Z1"].Style.Font.Bold = true;
 
                 ws.Cells["A1"].Value = "Id";
@@ -77,7 +77,7 @@ namespace ItroducereDateCuptor.Controllers
                 pck.Save();
             }
             stream.Position = 0;
-            string excelName = "RaportElind.xlsx";
+            string excelName = "RaportProductie.xlsx";
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", excelName);
 
         }
