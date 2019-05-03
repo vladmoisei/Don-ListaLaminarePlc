@@ -68,7 +68,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n<div id=\"formularButoane\" class=\"row\">\r\n    ");
             EndContext();
             BeginContext(138, 1248, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad7609f725704b5683cd7ebf557a10a0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d744d0640674cb19ccf51ca387d3b4e", async() => {
                 BeginContext(234, 1145, true);
                 WriteLiteral(@"
         <div class=""form-group col-lg-3"">
@@ -340,7 +340,7 @@ WriteAttributeValue("", 2536, BackgroundColour(item), 2536, 23, false);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(3916, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42fbc8d6a8824b4cb5449022106f7c76", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9cf965e193b64ba7820d47c19bd33192", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -358,7 +358,7 @@ WriteAttributeValue("", 2536, BackgroundColour(item), 2536, 23, false);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(3983, 39, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a72f213e9f364795acb59f28dbc125d3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d576f79cce484048abb1dc6b6ff1c1e2", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -376,7 +376,7 @@ WriteAttributeValue("", 2536, BackgroundColour(item), 2536, 23, false);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(4028, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "901f16e0c5c84585bb8d53c898728960", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "842397c1b06441368208ea8620902d87", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

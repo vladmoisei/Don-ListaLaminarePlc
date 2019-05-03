@@ -77,12 +77,14 @@ namespace ItroducereDateCuptor
                     RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 36, S7.Net.Types.String.ToByteArray(calitate, 10));
                     // Write to Plc dataOraLaminare
                     RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 48, S7.Net.Types.String.ToByteArray(dataOraLaminare, 16));
-
+                    // Write true to a bit for each bar
+                    RasturnatorFataCaja3.Write("DB2.DBX0.0", true);
                     //bool proba = Convert.ToBoolean(RasturnatorFataCaja3.Read("E0.0")).ToString();
                     //string probaText = Convert.ToString(RasturnatorFataCaja3.Read(DataType.DataBlock, 1, 12, VarType.String, 10));
-
+                    // Inchidere conexiune plc
                     if (RasturnatorFataCaja3.IsConnected) RasturnatorFataCaja3.Close();
                 }, cancelTask.Token);
+                // Cancel task in timpul alocat
                 if (!performTaskCheckAvailability.Wait(TimeSpan.FromSeconds(1)))
                     cancelTask.Cancel(); ; // Asteapta Task sa fie complet in 1 sec 
             }

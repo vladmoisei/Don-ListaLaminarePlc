@@ -72,3 +72,4 @@ C:\Users\IA\Desktop\Proiecte in lucru\Don-ListaLaminarePlc\ItroducereDateCuptor\
 C:\Users\IA\Desktop\Proiecte in lucru\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.dll
 C:\Users\IA\Desktop\Proiecte in lucru\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.pdb
 C:\Users\IA\Desktop\Proiecte in lucru\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.csproj.CopyComplete
+C:\Users\IA\Desktop\Proiecte in lucru\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.csprojAssemblyReference.cache
