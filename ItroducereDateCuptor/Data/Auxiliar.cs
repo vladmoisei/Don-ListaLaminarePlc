@@ -58,27 +58,31 @@ namespace ItroducereDateCuptor
                     //if (RasturnatorFataCaja3.IsAvailable)
                     RasturnatorFataCaja3.Open();
                     bool isDataAfara = false;
-                    string id = blum.Id.ToString();
-                    string diametru = blum.Diametru.ToString();
+                    int id = blum.Id;
+                    short diametru = (short)blum.Diametru;
                     string sarja = blum.Sarja;
                     string furnizor = blum.Furnizor;
                     string calitate = blum.Calitate;
                     string dataOraLaminare = blum.DataOraLaminare;
-                    // Am scris decalat cu 2 byte ( inca nu stiu de ce, primii 2 bytes sunt rezervati)
-                    // Write to Plc Id
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 4, S7.Net.Types.String.ToByteArray(id, 10));
-                    // Write to Plc Diametru
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 16, S7.Net.Types.String.ToByteArray(diametru, 3));
-                    // Write to Plc Sarja
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 22, S7.Net.Types.String.ToByteArray(sarja, 8));
-                    // Write to Plc Furnizor
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 32, S7.Net.Types.String.ToByteArray(furnizor, 2));
-                    // Write to Plc Calitate
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 36, S7.Net.Types.String.ToByteArray(calitate, 10));
-                    // Write to Plc dataOraLaminare
-                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 48, S7.Net.Types.String.ToByteArray(dataOraLaminare, 16));
+
                     // Write true to a bit for each bar
                     RasturnatorFataCaja3.Write("DB2.DBX0.0", true);
+                    // Am scris decalat cu 2 byte ( inca nu stiu de ce, primii 2 bytes sunt rezervati)
+                    // Write to Plc Id
+                    RasturnatorFataCaja3.Write("DB2.DBD2", id);
+                    //RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 4, S7.Net.Types.String.ToByteArray(id, 10));
+                    // Write to Plc Diametru
+                    RasturnatorFataCaja3.Write("DB2.DBW6", diametru);
+                    //RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 16, S7.Net.Types.String.ToByteArray(diametru, 3));
+                    // Write to Plc Sarja
+                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 10, S7.Net.Types.String.ToByteArray(sarja, 8));
+                    // Write to Plc Furnizor
+                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 20, S7.Net.Types.String.ToByteArray(furnizor, 2));
+                    // Write to Plc Calitate
+                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 24, S7.Net.Types.String.ToByteArray(calitate, 10));
+                    // Write to Plc dataOraLaminare
+                    RasturnatorFataCaja3.WriteBytes(DataType.DataBlock, 2, 36, S7.Net.Types.String.ToByteArray(dataOraLaminare, 16));
+                    
                     //bool proba = Convert.ToBoolean(RasturnatorFataCaja3.Read("E0.0")).ToString();
                     //string probaText = Convert.ToString(RasturnatorFataCaja3.Read(DataType.DataBlock, 1, 12, VarType.String, 10));
                     // Inchidere conexiune plc
