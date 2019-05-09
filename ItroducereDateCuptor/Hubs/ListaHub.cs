@@ -11,7 +11,6 @@ namespace IntroducereDateCuptor
     {
         public async Task ActualizareListaClienti(List<Blum> listaActualizata) 
         {
-
             await Clients.All.SendAsync("show_data", listaActualizata);
         }
     }

@@ -1,7 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Descriere";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<h3>Instructiuni pentru operator cuptor</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>Pe pagina de start este afisata lista de productie. <br />Operatorul de la cuptor are obligatia, 
+    dupa ce da afara din cuptor o bucata, sa apese butonul "Laminare".<br /> Daca apar probleme neprevazute si 
+    este nevoit sa dea o bucata retur, va apasa butonul "Retur". <br /><strong>Nota:</strong> <br />Operatorul 
+    face aceasta operatie doar dupa ce da afara din cuptor, de asemenea nu mai face nicio alta actiune pentru barele dupa linie care sunt
+    rebut sau retur.
+</p>
+<p>
+    Dupa apasarea butonului "Laminare" / "Retur", va fi indicata pe ecran cu culoare verde bucata pe care a dat-o afara,
+    cat si data la care a fost data afara, plus incrementarea counterului "Bare date afara"(Acesta monitorizeaza numarul bucatilor date afara). 
+    De asemenea pe ecran apar in lista in ordine blumurile care urmeaza sa fie date afara.<br />
+    La intrarea in schimb trebuie sa apasati butonul "Reset Counter" pentru a seta counterul de bare date afara la 0.<br />
+    Pentru orice probleme(daca lista nu corespunde, daca ati apsat din greseala de 2 ori laminare) sau neclaritati,
+    contactati pe Vlad Moisei sau Bogdan Mitran.
+</p>
+
+<h3>Intructiuni adaugare fisier excel cu lista productie</h3>
+<p>
+    In pagina "Incarca fisier" se apasa butonul Browse si selecteaza un fisier excel cu extensia .xlsx (nu merge formatul vechi cu extensia .xls).
+    Apoi se apasa butonul Upload.
+    <br />
+    Fisierul va avea formatul datelor de exp.: <br />
+    id[int]	diam[int]	sarja(string[8])	furnizor(string[2])	calitate(string[10]) <br />
+    1	110	1bed1	r1	calitate1<br />
+    2	120	2bed2	r2	calitate2<br />
+    <strong>Nota: </strong><br />
+    Deoarece datele se stocheaza in server SQL, id-ul trebuie sa fie diferit. <br />    
+    La introducerea datelor, trebuie verificat id-ul ultimei bucati din lista, si de acolo trebuie continuat in fisier.
+</p>
+
+<h3>Instructiuni extragere date in fisier excel</h3>
+<p>
+    In pagina Lista Blumuri aveti lista completa de blumuri care s-au produs cu detalii.
+    <br />
+    Aici aveti posibilitatea sa exportati lista in excel prin apasarea butonului Exporta in Excel. 
+    <br />
+    De asemenea se poate edita lista cat si sterge.
+</p>
