@@ -142,7 +142,7 @@ namespace ItroducereDateCuptor.Controllers
             }
 
             //Cream lista de blumuri din fisier excel
-            List<Blum> listaBlumuri = await Auxiliar.GetBlumsListFromFileAsync(formFile);
+            List<Blum> listaBlumuri = Auxiliar.GetBlumsListFromFileAsync(formFile);
 
             // Actualizam baza de date cu lista de blumuri din fisier
             if (listaBlumuri != null)

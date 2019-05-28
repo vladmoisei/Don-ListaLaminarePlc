@@ -13,13 +13,14 @@ namespace ItroducereDateCuptor
     public static class Auxiliar
     {
         // Task returnare lista blumuri din fisier excel 
-        public static async Task<List<Blum>> GetBlumsListFromFileAsync(IFormFile formFile)
+        //public static async Task<List<Blum>> GetBlumsListFromFileAsync(IFormFile formFile)
+            public static List<Blum> GetBlumsListFromFileAsync(IFormFile formFile)
         {
             var list = new List<Blum>();
 
             using (var stream = new MemoryStream())
             {
-                await formFile.CopyToAsync(stream);
+                formFile.CopyTo(stream);
 
                 using (var package = new ExcelPackage(stream))
                 {

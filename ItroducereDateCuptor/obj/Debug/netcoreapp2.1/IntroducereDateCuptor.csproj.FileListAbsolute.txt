@@ -109,3 +109,4 @@ C:\Users\User\Desktop\Programe cod sursa\Don-ListaLaminarePlc\ItroducereDateCupt
 C:\Users\User\Desktop\Programe cod sursa\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.dll
 C:\Users\User\Desktop\Programe cod sursa\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.pdb
 C:\Users\User\Desktop\Programe cod sursa\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.csproj.CopyComplete
+C:\Users\User\Desktop\Programe cod sursa\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Debug\netcoreapp2.1\IntroducereDateCuptor.csprojAssemblyReference.cache
