@@ -12843,11 +12843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\IntroducereDateCuptor.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-Raport lista cuptor\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\IntroducereDateCuptor.csproj",
       "projectName": "IntroducereDateCuptor",
-      "projectPath": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\IntroducereDateCuptor.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-Raport lista cuptor\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\IntroducereDateCuptor.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Programe cod sursa\\Don-Raport lista cuptor\\Don-ListaLaminarePlc\\ItroducereDateCuptor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
