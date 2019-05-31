@@ -150,8 +150,9 @@ namespace ItroducereDateCuptor.Controllers
                 foreach (Blum item in listaBlumuri)
                 {                 
                     _context.Add(item);
+                    _context.SaveChanges();
                 }
-                _context.SaveChanges();
+                
             }
 
             // Redirection la Index
