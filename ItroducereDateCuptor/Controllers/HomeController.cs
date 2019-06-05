@@ -44,9 +44,11 @@ namespace ItroducereDateCuptor.Controllers
         }
 
         // Actiune resetare counter bare pe schimb
-        public IActionResult ResetCountBar()
+        [HttpPost]
+        public IActionResult ResetCountBar(int counterValue)
         {
-            Auxiliar.CounterBareDateAfara = 0;
+            //Auxiliar.CounterBareDateAfara = Convert.ToInt32(counterValue);
+            Auxiliar.CounterBareDateAfara = counterValue;
             return RedirectToAction("Index");
         }
 

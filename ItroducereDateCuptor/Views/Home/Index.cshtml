@@ -4,7 +4,7 @@
 }
 
 <div id="formularButoane" class="row">
-    <form method="post" enctype="multipart/form-data" asp-controller="home" asp-action="ImportFile">
+    <form method="post" enctype="multipart/form-data" asp-controller="home" @*asp-action="ImportFile"*@>
         <div class="form-group col-lg-3">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a da afara urmatoarea bucata:</p>
@@ -20,6 +20,7 @@
         <div class="form-group col-lg-3">
             <div class="col-md-10">
                 <p>Apasa butonul de mai jos pentru a reseta counterul de bare:</p>
+                <input type="number" value="0" id="counterValue" name="counterValue"/>
                 <input type="submit" value="Reset counter" formaction="Home/ResetCountBar" />
             </div>
         </div>

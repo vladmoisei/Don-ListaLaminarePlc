@@ -224,7 +224,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1585, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830e7ee7bce74e728bf3da4dc80d8bb1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a622d0333ff94d3d84598da7f54f3bc6", async() => {
                 BeginContext(1631, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -259,7 +259,7 @@ using ItroducereDateCuptor.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1647, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d86d6e1105c84e90b1dca9c9bffef3ac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5a13962a353422a8157509b77bbcfa2", async() => {
                 BeginContext(1669, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

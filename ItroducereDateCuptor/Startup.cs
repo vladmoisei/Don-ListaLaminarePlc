@@ -33,9 +33,9 @@ namespace ItroducereDateCuptor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            // Server acasa: SQLEXPRESS
+            // Server acasa: SQLEXPRESS // 172.16.4.165
             services.AddDbContext<MyAppDbContext>(options =>
-            options.UseSqlServer(@"Server=172.16.4.165\SQLEXPRESS;Database=ListaProductieLaminorDatabase;User Id=user; Password=Calarasi81; MultipleActiveResultSets=true;"));
+            options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=ListaProductieLaminorDatabase;User Id=user; Password=Calarasi81; MultipleActiveResultSets=true;"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSignalR();
         }
