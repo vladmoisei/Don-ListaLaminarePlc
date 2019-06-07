@@ -73,3 +73,4 @@ C:\Users\User\Desktop\Programe cod sursa\Don-Raport lista cuptor\Don-ListaLamina
 C:\Users\User\Desktop\Programe cod sursa\Don-Raport lista cuptor\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Release\netcoreapp2.1\IntroducereDateCuptor.dll
 C:\Users\User\Desktop\Programe cod sursa\Don-Raport lista cuptor\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Release\netcoreapp2.1\IntroducereDateCuptor.pdb
 C:\Users\User\Desktop\Programe cod sursa\Don-Raport lista cuptor\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Release\netcoreapp2.1\IntroducereDateCuptor.csproj.CopyComplete
+C:\Users\User\Desktop\Programe cod sursa\Don-Raport lista cuptor\Don-ListaLaminarePlc\ItroducereDateCuptor\obj\Release\netcoreapp2.1\Razor\Views\Home\Actualizare.g.cshtml.cs

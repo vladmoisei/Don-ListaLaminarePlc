@@ -43,6 +43,26 @@ namespace ItroducereDateCuptor.Controllers
             return View(listaDeAfisat);
         }
 
+        //IActionResult Index cu refresh automat la pagina pentru afisare pe clienti fara butoane
+        public async Task<IActionResult> Actualizare()
+        {
+            // Returnare counter bare data afara (verific, daca nu exista il initializez cu 0)
+            Auxiliar.CounterBareDateAfara = string.IsNullOrEmpty(Auxiliar.CounterBareDateAfara.ToString()) ? 0 : Auxiliar.CounterBareDateAfara;
+            ViewBag.CounterBareDateAfara = Auxiliar.CounterBareDateAfara;
+            // Selectie lista blumuri care nu sunt date afara sau retur
+            List<Blum> listaDeAfisat = _context.Blums.Where(b => !b.IsDatAfara && !b.IsRetur).ToList();
+            // Adaugare in lista pe prima pozitie ultima bucata data afara sau retur
+            listaDeAfisat.Insert(0, _context.Blums.Where(b => b.IsDatAfara || b.IsRetur).ToList().LastOrDefault());
+            //string listaDeAfisatt = "proba";
+            // Creare parametru nr bare date afara pentru a il transfera la functie SignalR
+            int nrBareDateAfara = ViewBag.CounterBareDateAfara;
+            // Creare parametru JSON din lista afisare pentru a trimite in SignalR
+            string listaDeTrimisInJavaScript = JsonConvert.SerializeObject(listaDeAfisat, Formatting.None);
+            // SignalR - trimit la toti clientii lista actualizata si nrBareDateAfara
+            await _hub.Clients.All.SendAsync("show_data", listaDeTrimisInJavaScript, nrBareDateAfara);
+            return View(listaDeAfisat);
+        }
+
         // Actiune resetare counter bare pe schimb
         [HttpPost]
         public IActionResult ResetCountBar(int counterValue)
