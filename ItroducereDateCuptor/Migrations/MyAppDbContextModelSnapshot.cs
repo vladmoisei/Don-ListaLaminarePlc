@@ -40,8 +40,16 @@ namespace ItroducereDateCuptor.Migrations
 
                     b.Property<bool>("IsRetur");
 
+                    b.Property<int>("Lungime");
+
+                    b.Property<string>("Normalizare")
+                        .IsRequired()
+                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
+
                     b.Property<string>("Sarja")
                         .HasMaxLength(8);
+
+                    b.Property<string>("Sectiune");
 
                     b.HasKey("Id");
 

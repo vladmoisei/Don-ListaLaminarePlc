@@ -52,6 +52,15 @@
                 @Html.DisplayNameFor(model => model.Calitate)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Sectiune)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lungime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Normalizare)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.IsDatAfara)
             </th>
             <th>
@@ -68,32 +77,41 @@
         <tbody id="corpTabel">
             @foreach (var item in Model)
             {
-                <tr class="@BackgroundColour(item)">
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Diametru)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Sarja)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Furnizor)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Calitate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsDatAfara)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsRetur)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataOraLaminare)
-                    </td>
-                </tr>
+            <tr class="@BackgroundColour(item)">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Diametru)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sarja)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Furnizor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calitate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sectiune)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lungime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Normalizare)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDatAfara)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsRetur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataOraLaminare)
+                </td>
+            </tr>
             }
         </tbody>
     }

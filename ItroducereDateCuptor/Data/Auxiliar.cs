@@ -31,13 +31,17 @@ namespace ItroducereDateCuptor
                     {
                         int id = int.TryParse(worksheet.Cells[row, 1].Value.ToString().Trim(), out int i) ? i : 0;
                         int diam = int.TryParse(worksheet.Cells[row, 2].Value.ToString().Trim(), out int d) ? d : 0;
+                        int lung = int.TryParse(worksheet.Cells[row, 7].Value.ToString().Trim(), out int e) ? e : 0;
                         list.Add(new Blum
                         {
                             //Id = id, *Deoarece introduc in SQL server las sa fie adaugat de sql, pentru a fi sigur ca sunt diferite*
                             Diametru = diam,
                             Sarja = worksheet.Cells[row, 3].Value.ToString().Trim(),
                             Furnizor = worksheet.Cells[row, 4].Value.ToString().Trim(),
-                            Calitate = worksheet.Cells[row, 5].Value.ToString().Trim()
+                            Calitate = worksheet.Cells[row, 5].Value.ToString().Trim(),
+                            Sectiune = worksheet.Cells[row, 6].Value.ToString().Trim(),
+                            Lungime = lung,
+                            Normalizare = (char)worksheet.Cells[row, 7].Value.ToString().Trim()[0]
                         });
                     }
                 }

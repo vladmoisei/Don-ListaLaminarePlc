@@ -13,6 +13,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/ListaHub").build()
 // Receive functie apelata dupa server
 connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara) {
     // Retrive data (list of blums) from server
+    console.log("Progba");
     // Convertesc in JSON
     var data = JSON.parse(listaDeTrimisInJavaScript);
     // Actualizare numar bare date afara
@@ -23,6 +24,7 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
     // Pe fiecare rand adaug element primit de la functie Hub
     data.forEach(function (item, index) {
         //alert(index);
+        console.log("Lungime: " + item.Lungime);
         // Creare rand element
         var tr = document.createElement("tr");
         // Creare camp pentru fiecare element obiect
@@ -36,6 +38,12 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
         tdFurnizor.innerHTML = item.Furnizor;
         var tdCalitate = document.createElement("td");
         tdCalitate.innerHTML = item.Calitate;
+        var tdSectiune = document.createElement("td");
+        tdSectiune.innerHTML = item.Sectiune;
+        var tdLungime = document.createElement("td");
+        tdLungime.innerHTML = item.Lungime;
+        var tdNormalizare = document.createElement("td");
+        tdNormalizare.innerHTML = item.Normalizare;
         var tdDatAfara = document.createElement("td");
         tdDatAfara.innerHTML = item.IsDatAfara;
         // Afisez checkbox in loc de true or false
@@ -57,8 +65,8 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
         // Afisez checkbox in loc de true or false
         if (item.IsDatAfara || item.IsRetur) {
             tr.classList.add("background_green");
-        }        
-        tr.append(tdId, tdDiametru, tdSarja, tdFurnizor, tdCalitate, tdDatAfara, tdRetur, tdOraDatAfara);
+        }
+        tr.append(tdId, tdDiametru, tdSarja, tdFurnizor, tdCalitate, tdSectiune, tdLungime, tdNormalizare, tdDatAfara, tdRetur, tdOraDatAfara);
         corpTabel.appendChild(tr);
     });
 
