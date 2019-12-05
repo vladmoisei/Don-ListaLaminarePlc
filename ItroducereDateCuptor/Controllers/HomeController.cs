@@ -181,7 +181,19 @@ namespace ItroducereDateCuptor.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult About()
+        // Functie stergere elemente cu Id-ul mai mare ca cel introdus
+        public async Task<IActionResult> StergereElementeById(int numberId)
+        {
+            //return Content(numberId.ToString());
+            // Stergere range elemente mai mari decat Id-ul introdus
+            _context.Blums.RemoveRange(_context.Blums.Where(item => item.Id > numberId));
+            await _context.SaveChangesAsync();
+            // Redirection la Index
+            return RedirectToAction("Index", "Home");
+        }
+
+
+            public IActionResult About()
         {
             ViewData["Message"] = "Instructiuni de utilizare.";
 

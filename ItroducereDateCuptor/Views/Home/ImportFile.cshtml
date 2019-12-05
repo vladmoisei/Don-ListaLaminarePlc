@@ -20,3 +20,18 @@
         </div>
     </form>
 </div>
+<div class="row">
+    <form method="post" enctype="multipart/form-data" asp-controller="home" asp-action="StergereElementeById">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Sterge cu Id-ul mai mare decat cel introdus:</p>
+                <input id="numberId" name="numberId" type="number" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input id="butonStergereElemById" type="submit" value="Sterge" />
+            </div>
+        </div>
+    </form>
+</div>
