@@ -13,7 +13,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/ListaHub").build()
 // Receive functie apelata dupa server
 connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara) {
     // Retrive data (list of blums) from server
-    console.log("Progba");
+    
     // Convertesc in JSON
     var data = JSON.parse(listaDeTrimisInJavaScript);
     // Actualizare numar bare date afara
@@ -24,7 +24,8 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
     // Pe fiecare rand adaug element primit de la functie Hub
     data.forEach(function (item, index) {
         //alert(index);
-        console.log("Lungime: " + item.Lungime);
+        //console.log("Lungime: " + item.Lungime);
+        //console.log("Normalizare: " + item.Normalizare);
         // Creare rand element
         var tr = document.createElement("tr");
         // Creare camp pentru fiecare element obiect
@@ -66,7 +67,21 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
         if (item.IsDatAfara || item.IsRetur) {
             tr.classList.add("background_green");
         }
-        tr.append(tdId, tdDiametru, tdSarja, tdFurnizor, tdCalitate, tdSectiune, tdLungime, tdNormalizare, tdDatAfara, tdRetur, tdOraDatAfara);
+        // Modific backgound colour la casuta normalizare, pentru a o evidentia mai bine
+        IsNormalised(tdNormalizare);
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdDiametru);
+        tr.appendChild(tdSarja);
+        tr.appendChild(tdFurnizor);
+        tr.appendChild(tdCalitate);
+        tr.appendChild(tdSectiune);
+        tr.appendChild(tdLungime);
+        tr.appendChild(tdNormalizare);
+        tr.appendChild(tdDatAfara);
+        tr.appendChild(tdRetur);
+        tr.appendChild(tdOraDatAfara);
+        //tr.append(tdId, tdDiametru, tdSarja, tdFurnizor, tdCalitate, tdSectiune, tdLungime, tdNormalizare, tdDatAfara, tdRetur, tdOraDatAfara);
         corpTabel.appendChild(tr);
     });
 
@@ -74,6 +89,13 @@ connection.on("show_data", function (listaDeTrimisInJavaScript, nrBareDateAfara)
         var tr = document.createElement("tr");
         tr.textContent = item.Id;
         document.getElementById('corpTabel').appendChild(tr);
+    }
+
+    // Functie verificare daca se normalizeaza si schimba culoare backGround
+    function IsNormalised(elem) {
+        if (elem.innerHTML === "N") {
+            elem.classList.add("background_violet");
+        }
     }
 });
 

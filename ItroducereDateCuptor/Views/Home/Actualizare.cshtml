@@ -73,7 +73,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Lungime)
                 </td>
-                <td>
+                <td class="@IsNormalisedBackgroundColour(item)">
                     @Html.DisplayFor(modelItem => item.Normalizare)
                 </td>
                 <td>
@@ -92,13 +92,21 @@
 </table>
 
 @functions {
-public string BackgroundColour(Blum blum)
-{
-    if (blum == null) return "";
-    if (blum.IsDatAfara || blum.IsRetur)
-        return "background_green";
-    return "";
-}
+    public string BackgroundColour(Blum blum)
+    {
+        if (blum == null) return "";
+        if (blum.IsDatAfara || blum.IsRetur)
+            return "background_green";
+        return "";
+    }
+
+    // Functie verificare daca se normalizeaza si schimba culoare backGround
+    public string IsNormalisedBackgroundColour(Blum blum)
+    {
+        if (blum == null) return "";
+        else if (blum.Normalizare == "N") return "background_violet";
+        return "";
+    }
 }
 
 @* Scripturi librarie SignalR, plus signalR create de mine, si site.js *@

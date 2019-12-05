@@ -3,7 +3,11 @@
 
 // Write your JavaScript code.
 
-document.getElementById("butonAscundere").addEventListener("click", function (event) {
+// Buton ascundere butoane operator din pagina de Index
+var butonAscundere = document.getElementById("butonAscundere");
+if (butonAscundere !== null) butonAscundere.addEventListener("click", function (event) {
     event.preventDefault();
     document.getElementById("formularButoane").classList.add("hidden");
 });
+
+

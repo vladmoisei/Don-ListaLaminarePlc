@@ -43,8 +43,7 @@ namespace ItroducereDateCuptor.Migrations
                     b.Property<int>("Lungime");
 
                     b.Property<string>("Normalizare")
-                        .IsRequired()
-                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)));
+                        .HasMaxLength(10);
 
                     b.Property<string>("Sarja")
                         .HasMaxLength(8);

@@ -24,7 +24,8 @@ namespace ItroducereDateCuptor
         public bool IsRebut { get; set; }
         public string Sectiune { get; set; }
         public int Lungime { get; set; }
-        public char Normalizare { get; set; }
+        [MaxLength(10)]
+        public string Normalizare { get; set; }
         [DisplayName("Ora data afara")]
         public string DataOraLaminare { get; set; }
     }

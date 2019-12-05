@@ -39,9 +39,10 @@ namespace ItroducereDateCuptor
                             Sarja = worksheet.Cells[row, 3].Value.ToString().Trim(),
                             Furnizor = worksheet.Cells[row, 4].Value.ToString().Trim(),
                             Calitate = worksheet.Cells[row, 5].Value.ToString().Trim(),
-                            Sectiune = worksheet.Cells[row, 6].Value.ToString().Trim(),
+                            //Sectiune = worksheet.Cells[row, 6].Value.ToString().Trim(),
+                            Sectiune = Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim()),
                             Lungime = lung,
-                            Normalizare = (char)worksheet.Cells[row, 7].Value.ToString().Trim()[0]
+                            Normalizare = worksheet.Cells[row, 8].Value.ToString().Trim()
                         });
                     }
                 }
@@ -97,6 +98,30 @@ namespace ItroducereDateCuptor
                 if (!performTaskCheckAvailability.Wait(TimeSpan.FromSeconds(1)))
                     cancelTask.Cancel(); ; // Asteapta Task sa fie complet in 1 sec 
             }
+        }
+
+        // Functie Get Sectiune in functie de furnizor (dat de Bogdan)
+        public static string GetSectiuneByFurnizor(string furnizor)
+        {
+            switch (furnizor)
+            {
+                case "TK":
+                    return "360x360";
+                case "VA":
+                    return "390x283";
+                case "SW":
+                    return "430x320";
+                case "SH":
+                    return "320x270";
+                case "PS":
+                    return "400x300";
+                case "SO":
+                    return "250x300";
+
+                default:
+                    break;
+            }
+            return "";
         }
     }
 }
