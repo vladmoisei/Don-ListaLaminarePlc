@@ -13,6 +13,7 @@ namespace ItroducereDateCuptor
     public static class Auxiliar
     {
         // Task returnare lista blumuri din fisier excel 
+        // Introducere in fisier blum cu blum
         public static async Task<List<Blum>> GetBlumsListFromFileAsync(IFormFile formFile)
         //public static List<Blum> GetBlumsListFromFileAsync(IFormFile formFile)
         {
@@ -47,6 +48,55 @@ namespace ItroducereDateCuptor
                     }
                 }
             }
+
+            return list;
+        }
+
+        // Task returnare lista blumuri din fisier excel 
+        // Introducere in fisier sarja de blumuri, si extrag de acolo blum cu blum
+        public static async Task<List<Blum>> GetBlumsListFromExcelFileBySarjaAsync(IFormFile formFile)
+        //public static List<Blum> GetBlumsListFromFileAsync(IFormFile formFile)
+        {
+            var list = new List<Blum>();
+
+            using (var stream = new MemoryStream())
+            {
+                await formFile.CopyToAsync(stream);
+
+                using (var package = new ExcelPackage(stream))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                    var rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        // int id = int.TryParse(worksheet.Cells[row, 1].Value.ToString().Trim(), out int i) ? i : 0;
+                        int diam = int.TryParse(worksheet.Cells[row, 2].Value.ToString().Trim(), out int d) ? d : 0;                        
+                        string sarja = worksheet.Cells[row, 3].Value.ToString().Trim();
+                        string furnizor = worksheet.Cells[row, 4].Value.ToString().Trim();
+                        string calitate = worksheet.Cells[row, 5].Value.ToString().Trim();
+                        // Sectiune este in functie de furnizor, predefinit
+                        string sectiune = Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim());
+                        int lung = int.TryParse(worksheet.Cells[row, 7].Value.ToString().Trim(), out int e) ? e : 0;
+                        string normalizare = worksheet.Cells[row, 8].Value.ToString().Trim();
+                        int nrBucati = int.TryParse(worksheet.Cells[row, 9].Value.ToString().Trim(), out int f) ? f : 0;
+                        for (int i = 0; i < nrBucati; i++)
+                        {
+                            list.Add(new Blum
+                            {
+                                Diametru = diam,
+                                Sarja = sarja,
+                                Furnizor = furnizor,
+                                Calitate = calitate,
+                                Sectiune = sectiune,
+                                Lungime = lung,
+                                Normalizare = normalizare
+                            });
+                        }                        
+                    }
+                }
+            }
+
             return list;
         }
 

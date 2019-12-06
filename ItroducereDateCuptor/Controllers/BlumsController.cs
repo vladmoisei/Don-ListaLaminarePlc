@@ -52,10 +52,13 @@ namespace ItroducereDateCuptor.Controllers
                 ws.Cells["C1"].Value = "Sarja";
                 ws.Cells["D1"].Value = "Furnizor";
                 ws.Cells["E1"].Value = "Calitate";
-                ws.Cells["F1"].Value = "Dat afara";
-                ws.Cells["G1"].Value = "Retur";
-                ws.Cells["H1"].Value = "Rebut";
-                ws.Cells["I1"].Value = "Ora data afara";
+                ws.Cells["F1"].Value = "Sectiune";
+                ws.Cells["G1"].Value = "Lungime";
+                ws.Cells["H1"].Value = "Normalizare";
+                ws.Cells["I1"].Value = "Dat afara";
+                ws.Cells["J1"].Value = "Retur";
+                ws.Cells["K1"].Value = "Rebut";
+                ws.Cells["L1"].Value = "Ora data afara";
 
                 int rowStart = 2;
                 foreach (var elem in listaDeAfisat)
@@ -65,10 +68,13 @@ namespace ItroducereDateCuptor.Controllers
                     ws.Cells[string.Format("C{0}", rowStart)].Value = elem.Sarja;
                     ws.Cells[string.Format("D{0}", rowStart)].Value = elem.Furnizor;
                     ws.Cells[string.Format("E{0}", rowStart)].Value = elem.Calitate;
-                    ws.Cells[string.Format("F{0}", rowStart)].Value = elem.IsDatAfara;
-                    ws.Cells[string.Format("G{0}", rowStart)].Value = elem.IsRetur;
-                    ws.Cells[string.Format("H{0}", rowStart)].Value = elem.IsRebut;
-                    ws.Cells[string.Format("I{0}", rowStart)].Value = elem.DataOraLaminare;
+                    ws.Cells[string.Format("F{0}", rowStart)].Value = elem.Sectiune;
+                    ws.Cells[string.Format("G{0}", rowStart)].Value = elem.Lungime;
+                    ws.Cells[string.Format("H{0}", rowStart)].Value = elem.Normalizare;
+                    ws.Cells[string.Format("I{0}", rowStart)].Value = elem.IsDatAfara;
+                    ws.Cells[string.Format("J{0}", rowStart)].Value = elem.IsRetur;
+                    ws.Cells[string.Format("K{0}", rowStart)].Value = elem.IsRebut;
+                    ws.Cells[string.Format("L{0}", rowStart)].Value = elem.DataOraLaminare;
                     rowStart++;
                 }
 
