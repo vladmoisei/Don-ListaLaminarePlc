@@ -70,7 +70,8 @@ namespace ItroducereDateCuptor
 
                     for (int row = 2; row <= rowCount; row++)
                     {
-                        // int id = int.TryParse(worksheet.Cells[row, 1].Value.ToString().Trim(), out int i) ? i : 0;
+                        //Id = id, *Deoarece introduc in SQL server las sa fie adaugat de sql, pentru a fi sigur ca sunt diferite*
+                        //int id = int.TryParse(worksheet.Cells[row, 1].Value.ToString().Trim(), out int c) ? c : 0;
                         int diam = int.TryParse(worksheet.Cells[row, 2].Value.ToString().Trim(), out int d) ? d : 0;                        
                         string sarja = worksheet.Cells[row, 3].Value.ToString().Trim();
                         string furnizor = worksheet.Cells[row, 4].Value.ToString().Trim();
@@ -84,6 +85,7 @@ namespace ItroducereDateCuptor
                         {
                             list.Add(new Blum
                             {
+                                //Id = id++,
                                 Diametru = diam,
                                 Sarja = sarja,
                                 Furnizor = furnizor,
