@@ -35,13 +35,13 @@ namespace ItroducereDateCuptor
                         int lung = int.TryParse(worksheet.Cells[row, 7].Value.ToString().Trim(), out int e) ? e : 0;
                         list.Add(new Blum
                         {
-                            //Id = id, *Deoarece introduc in SQL server las sa fie adaugat de sql, pentru a fi sigur ca sunt diferite*
+                            // Id = id, *Deoarece introduc in SQL server las sa fie adaugat de sql, pentru a fi sigur ca sunt diferite*
                             Diametru = diam,
                             Sarja = worksheet.Cells[row, 3].Value.ToString().Trim(),
                             Furnizor = worksheet.Cells[row, 4].Value.ToString().Trim(),
                             Calitate = worksheet.Cells[row, 5].Value.ToString().Trim(),
-                            //Sectiune = worksheet.Cells[row, 6].Value.ToString().Trim(),
-                            Sectiune = Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim()),
+                            Sectiune = worksheet.Cells[row, 6].Value.ToString().Trim(),
+                            // Sectiune = Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim()),
                             Lungime = lung,
                             Normalizare = worksheet.Cells[row, 8].Value.ToString().Trim()
                         });
@@ -76,8 +76,8 @@ namespace ItroducereDateCuptor
                         string sarja = worksheet.Cells[row, 3].Value.ToString().Trim();
                         string furnizor = worksheet.Cells[row, 4].Value.ToString().Trim();
                         string calitate = worksheet.Cells[row, 5].Value.ToString().Trim();
-                        // Sectiune este in functie de furnizor, predefinit
-                        string sectiune = Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim());
+                        // Sectiune este in functie de furnizor, predefinit: Auxiliar.GetSectiuneByFurnizor(worksheet.Cells[row, 4].Value.ToString().Trim());
+                        string sectiune = worksheet.Cells[row, 6].Value.ToString().Trim();
                         int lung = int.TryParse(worksheet.Cells[row, 7].Value.ToString().Trim(), out int e) ? e : 0;
                         string normalizare = worksheet.Cells[row, 8].Value.ToString().Trim();
                         int nrBucati = int.TryParse(worksheet.Cells[row, 9].Value.ToString().Trim(), out int f) ? f : 0;
