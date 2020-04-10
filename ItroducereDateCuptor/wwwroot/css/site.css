@@ -48,3 +48,12 @@ body {
     color: red;
     margin-left: 300px;
 }
+
+.imagine {
+    height: 51px;
+    border-radius: 5px;
+}
+
+.navbar-header {
+    height: 72px;
+}
